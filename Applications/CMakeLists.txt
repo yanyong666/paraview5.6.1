@@ -13,7 +13,7 @@ if (PARAVIEW_BUILD_QT_GUI)
     pqCore
     pqComponents
     pqApplicationComponents)
-  include_directories(${__PV_VTK_INCLUDE_DIRS})
+  #include_directories(${__PV_VTK_INCLUDE_DIRS})
   link_directories(${__PV_VTK_LIBRARY_DIRS})
   
   include(ParaViewBranding)

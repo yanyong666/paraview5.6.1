@@ -14,8 +14,8 @@ pv_find_package_qt(qt_targets REQUIRED QUIET QT5_COMPONENTS Widgets)
 pv_qt_wrap_cpp(MOC_BUILT_SOURCES ParaViewMainWindow.h)
 pv_qt_wrap_ui(UI_BUILT_SOURCES ParaViewMainWindow.ui)
 include_directories(
-  #${CMAKE_CURRENT_SOURCE_DIR}
-  #${CMAKE_CURRENT_BINARY_DIR}
+  ${CMAKE_CURRENT_SOURCE_DIR}
+  ${CMAKE_CURRENT_BINARY_DIR}
   ${CMAKE_CURRENT_SOURCE_DIR}/Documentation
   )
 
