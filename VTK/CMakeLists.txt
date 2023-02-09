@@ -1,5 +1,8 @@
 cmake_minimum_required(VERSION 3.3...3.12 FATAL_ERROR)
 
+# Prevent a "command line is too long" failure in Windows.
+set(CMAKE_NINJA_FORCE_RESPONSE_FILE "ON" CACHE BOOL "Force Ninja to use response files.")
+
 if(CMAKE_SYSTEM_NAME STREQUAL "Android" AND CMAKE_VERSION VERSION_LESS 3.7)
   message(FATAL_ERROR "CMake 3.7 or above is required to build for Android")
 endif()
