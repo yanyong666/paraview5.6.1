@@ -1,6 +1,11 @@
 #------------------------------------------------------------------------------
 # Add extra library containing custom code for the client.
+
 include(ParaViewQt)
+
+# Prevent a "command line is too long" failure in Windows.
+set(CMAKE_NINJA_FORCE_RESPONSE_FILE "ON" CACHE BOOL "Force Ninja to use response files.")
+
 pv_find_package_qt(qt_targets REQUIRED QUIET QT5_COMPONENTS Widgets)
 pv_qt_wrap_cpp(MOC_BUILT_SOURCES ParaViewMainWindow.h)
 pv_qt_wrap_ui(UI_BUILT_SOURCES ParaViewMainWindow.ui)
