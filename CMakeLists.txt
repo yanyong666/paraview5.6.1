@@ -33,9 +33,6 @@ cmake_minimum_required(VERSION 3.3)
 project(ParaView)
 
 
-# Prevent a "command line is too long" failure in Windows.
-set(CMAKE_NINJA_FORCE_RESPONSE_FILE "ON" CACHE BOOL "Force Ninja to use response files.")
-
 # Disallow in-source build
 if ("${ParaView_SOURCE_DIR}"  STREQUAL "${ParaView_BINARY_DIR}")
   message(FATAL_ERROR

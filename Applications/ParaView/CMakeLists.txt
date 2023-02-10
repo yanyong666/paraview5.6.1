@@ -6,9 +6,6 @@ include(ParaViewQt)
 set(CMAKE_AUTOMOC 1)
 set(CMAKE_AUTOUIC 1)
 
-# Prevent a "command line is too long" failure in Windows.
-set(CMAKE_NINJA_FORCE_RESPONSE_FILE "ON" CACHE BOOL "Force Ninja to use response files.")
-
 
 pv_find_package_qt(qt_targets REQUIRED QUIET QT5_COMPONENTS Widgets)
 pv_qt_wrap_cpp(MOC_BUILT_SOURCES ParaViewMainWindow.h)
